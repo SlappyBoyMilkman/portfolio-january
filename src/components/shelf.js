@@ -27,7 +27,7 @@ class Shelf extends React.Component{
       ( page, index ) => {
         let style = {};
         style.transitionDelay = this.state.menuOpen ? .2 + index * .1 + "s": index * .1 + "s";
-        style.marginTop = this.state.menuOpen ? "0px": "10vh";
+        style.marginTop = this.state.menuOpen ? "0px": "15vh";
         style.pointerEvents = this.state.menuOpen ? "painted": "none";
         return(
           <div className = "shelf__menu-word__wrapper">
