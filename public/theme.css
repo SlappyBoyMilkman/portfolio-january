@@ -1,0 +1,218 @@
+body {
+ }
+
+@font-face {
+  font-family: "graphik";
+  font-style: normal;
+  src: url("./fonts/Super.otf"); }
+@font-face {
+  font-family: "graphik-regular";
+  font-style: normal;
+  src: url("./fonts/Regular.otf"); }
+@font-face {
+  font-family: "franklin";
+  font-style: normal;
+  src: url("./fonts/FranklinGothicStd-Condensed.otf"); }
+@font-face {
+  font-family: "graphik-medium";
+  font-style: normal;
+  src: url("./fonts/Medium.otf"); }
+@font-face {
+  font-family: "graphik-black";
+  font-style: normal;
+  src: url("./fonts/Medium.otf"); }
+.menuItem {
+  height: 33vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  border-top: 1px solid #808080;
+  transition: all 800ms cubic-bezier(0.7, 0.015, 0.265, 1);
+  overflow: hidden; }
+  .menuItem canvas {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.cart-drawer {
+  width: 0px;
+  z-index: 10; }
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: #464646;
+  z-index: 20; }
+
+.mouse-frame {
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+  height: 100vh; }
+
+.cursor {
+  position: fixed;
+  width: 50px;
+  pointer-events: none;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  /* cursor: none; */
+  border-radius: 100%;
+  z-index: 10; }
+
+.cart-drawer__background {
+  position: fixed;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  pointer-events: none; }
+
+.projects-wrapper {
+  height: 2000vh;
+  pointer-events: none; }
+
+.projects {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  display: none;
+  height: 100vh; }
+
+.overlay-background {
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: 110vh;
+  pointer-events: none;
+  top: 100%; }
+  .overlay-background canvas {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none; }
+
+.graphik {
+  font-family: "graphik";
+  font-size: 2vw; }
+
+.franklin {
+  font-family: "franklin"; }
+
+.fixed-top {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  pointer-events: none; }
+
+.project-index {
+  position: fixed;
+  left: 0px;
+  pointer-events: painted;
+  top: 0px; }
+
+.main-wrapper {
+  padding: 0px 0px;
+  position: relative;
+  box-sizing: border-box; }
+  .main-wrapper.main-wrapper--nav {
+    height: 100%; }
+  .main-wrapper.main-wrapper--projects {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh; }
+    .main-wrapper.main-wrapper--projects canvas {
+      position: absolute;
+      left: 100vw;
+      z-index: 2;
+      top: 0px;
+      left: 0px; }
+
+.nav {
+  position: fixed;
+  top: 0px;
+  pointer-events: none;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh; }
+  .nav .nav__border {
+    border: 2px solid #d7d7d7;
+    height: 100%; }
+
+.item {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.home__interface__wrapper {
+  position: absolute;
+  bottom: 40px;
+  color: red;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  z-index: 2; }
+
+.home__interface__item {
+  display: inline-block;
+  margin: 0px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "graphik-medium";
+  font-size: 14px;
+  pointer-events: painted; }
+
+@keyframes slide-left {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+.hamburger__wrapper {
+  position: fixed;
+  top: 40px;
+  width: 100px;
+  height: 120px;
+  z-index: 100;
+  pointer-events: painted; }
+  .hamburger__wrapper .bun {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 15px;
+    position: relative; }
+    .hamburger__wrapper .bun .bun__inner {
+      position: absolute;
+      left: 0px;
+      transition: .4s;
+      top: 0px;
+      height: 100%; }
+
+.loading__wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh; }
+  .loading__wrapper canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=theme.css.map */
