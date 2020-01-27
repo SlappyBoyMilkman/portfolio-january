@@ -84,7 +84,6 @@ class Projects extends React.Component{
   componentWillUnmount(){
     document.removeEventListener( "scroll", this.handle )
     this.animate = function(){
-      console.log("done")
     }
   }
 

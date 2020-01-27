@@ -312,7 +312,7 @@ class Scene extends SystemBase{
     next = this.projects[ selectedIndex ];
     if( next && current ){
       let diff = (next.index * 3500) - (current.index * 3500);
-      return diff * Math.abs( this.scrolled / 800 );
+      return diff * Math.abs( this.scrolled / 1200 );
     }else{
       return 0
     }
@@ -398,7 +398,7 @@ class Scene extends SystemBase{
       if( this.selectedProject ){
           if( Math.abs( this.targPos.x - this.cameraPos.x  ) >= .1 ){
             let diffX = this.targPos.x - this.cameraPos.x;
-            this.cameraPos.x += diffX / 10
+            this.cameraPos.x += diffX / 30
           }
 
           let scrollX = this.getScrollX()

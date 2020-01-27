@@ -6,6 +6,7 @@ import Menu from "./menu"
 import Contact from "./contact";
 import Project from "./project"
 import Loading from "./loadingTwo"
+import Landing from "./landing"
 import {withRouter} from 'react-router-dom';
 
 const projectData = require("../data/projects.js")
@@ -40,6 +41,7 @@ class Index extends React.Component{
       menuOpen: false,
       selectedPage: menuItems[0].name,
       projects: projects,
+      isLanding:  true,
       animating: {"projects": true}
     }
   }
@@ -169,6 +171,31 @@ class Index extends React.Component{
     }
   }
 
+  land(){
+
+  }
+
+  landing(){
+    if( this.state.isLanding ){
+      return(
+        <Landing land = { this.land.bind( this ) }/>
+      )
+    }else{
+      return(
+        <Projects
+        changeSelected = { this.changeSelected.bind( this ) }
+        menuItems = { this.state.menuItems }
+        menuItemClicked = { this.state.menuItemClicked }
+        clickTimer = { this.state.clickTimer }
+        projects = { this.state.projects }
+        menuOpen = { this.state.menuOpen }
+        animating = { this.isAnimating( "projects" ) }
+        clickProject = { this.clickProject.bind( this ) }
+        selectedPage = { this.state.selectedPage } />
+      )
+    }
+  }
+
   render(){
     return (
       <div className="App">
@@ -182,17 +209,9 @@ class Index extends React.Component{
             isProject = { false }
             clickMenuItem = { this.clickMenuItem.bind( this ) }
           />
-          <Mouse/>
-          <Projects
-          changeSelected = { this.changeSelected.bind( this ) }
-          menuItems = { this.state.menuItems }
-          menuItemClicked = { this.state.menuItemClicked }
-          clickTimer = { this.state.clickTimer }
-          projects = { this.state.projects }
-          menuOpen = { this.state.menuOpen }
-          animating = { this.isAnimating( "projects" ) }
-          clickProject = { this.clickProject.bind( this ) }
-          selectedPage = { this.state.selectedPage } />
+          {
+            this.landing()
+          }
           <Loading
             color = { this.getColor() }
             route = { this.getRoute() }

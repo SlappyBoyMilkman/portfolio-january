@@ -87,7 +87,6 @@ class TitleWord{
       let zPos = Math.cos( (yPos / this.height) * (Math.PI * .8) ) * radius  * 2;
       let newYPos = Math.sin( (yPos / this.height) * (Math.PI * .8) ) * radius  * 2;
       vertex.y = newYPos
-      console.log( zPos, (yPos / this.height)  )
       vertex.z = zPos
     }
 
@@ -98,7 +97,6 @@ class TitleWord{
       let zPos = Math.cos( (yPos / this.height) * (Math.PI * .8) ) * radius  * 2;
       let newYPos = Math.sin( (yPos / this.height) * (Math.PI * .8) ) * radius  * 2;
       vertex.y = newYPos
-      console.log( zPos, (yPos / this.height)  )
       vertex.z = zPos
     }
     this.back.scale.set( .9, .9, .9 )
